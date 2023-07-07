@@ -1,4 +1,11 @@
 <template>    
+<div>
+  <el-container>
+    <el-header height="80px" style="padding:0;color:black">
+      <div class="header">巡检管理系统</div>
+    </el-header>
+
+  </el-container>
     <el-container>
       <el-aside width="200px">  
         <img alt="Vue logo" src="./assets/logo.png" width="100" height="100">
@@ -60,6 +67,7 @@
           </el-sub-menu>
         </el-menu>
       </el-scrollbar>
+  
       </el-aside>
 
       <el-container>
@@ -83,8 +91,8 @@
         <el-main>
           <DemoOne></DemoOne>
           <el-table :data="tableData">
-            <el-table-column prop="date" label="Date" width="140" />
-            <el-table-column prop="name" label="Name" width="120" />
+            <el-table-column prop="date" label="Date" />
+            <el-table-column prop="name" label="Name"  />
             <el-table-column prop="address" label="Address" />
           </el-table>
         </el-main>
@@ -92,7 +100,9 @@
         <el-footer>Footer</el-footer>
       </el-container>
     </el-container>
+  </div>
 </template>
+
 
 <script>
 import { ref } from 'vue'
@@ -128,5 +138,11 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 0;
+}
+.header {
+  font-size: 30px;
+  line-height: 40px;
+  background-color:#2c3e50;
+
 }
 </style>
