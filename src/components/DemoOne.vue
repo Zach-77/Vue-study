@@ -1,5 +1,5 @@
 <template>
-    <h1>Demo1</h1>
+    <h1>Main Demo1</h1>
     <el-button type="primary" @click="click">跳转至demo2</el-button>
 </template>
 
