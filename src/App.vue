@@ -88,22 +88,16 @@
       </el-aside>
 
       <el-container>
-        <el-header style="text-align: center; font-size: 15px;border: 1px solid #ccc;background-color: ;">
-        <div class="toolbar">
-          <el-dropdown>
-            <el-icon style="margin-right: 8px; margin-top: 1px"
-              ></el-icon>
-            <template #dropdown>
-              <el-dropdown-menu>
-                <el-dropdown-item>View</el-dropdown-item>
-                <el-dropdown-item>Add</el-dropdown-item>
-                <el-dropdown-item>Delete</el-dropdown-item>
-              </el-dropdown-menu>
-            </template>
-          </el-dropdown>
-          <h1 style="text-align: left;position: relative;top:-25px;">主页</h1>
-          <span>Tom</span>
-        </div>
+        <el-header height="90px" style="padding:0;margin:0;font-size: 15px;border: 1px solid #ccc;">
+        <el-container>
+          <div class="desc">
+            查询入口
+          </div>
+          <el-button style="width:100px;height:30;margin:20px">
+            新增记录
+          </el-button>
+        </el-container>
+      
         </el-header>
 
         <el-main>
@@ -166,9 +160,15 @@ export default {
   line-height: 45px;
   background-color:black;
   padding-left: 20px;
-
-
 }
+
+.desc {
+  font-size:25px;
+  line-height: 80px;
+  color:black;
+  width:200px;
+}
+
 #user_pic {
   margin: 20px;
   float: right;
