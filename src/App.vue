@@ -19,8 +19,8 @@
 
 
   </el-container>
-    <el-container>
-      <el-aside width="200px">
+    <el-container style="background-color: #faf9f9;">
+      <el-aside width="200px" class="el-aside ">
         <el-scrollbar>
         <el-menu :default-openeds="['1']">
           <el-sub-menu index="1">
@@ -87,12 +87,15 @@
       </el-scrollbar>
       </el-aside>
 
-      <el-container>
-        <el-header style="text-align: center; font-size: 15px;border: 1px solid #ccc;background-color: ;">
-        <div class="toolbar">
-          <el-dropdown>
-            <el-icon style="margin-right: 8px; margin-top: 1px"
-              ></el-icon>
+      <el-container class="t-main" >
+        
+        <!--"主页"居中-->
+        <el-header class="el-header-body main-header" style="display: flex;flex-direction:row;align-items: center;">
+
+
+            <el-dropdown>
+            <el-icon style="text-align: left;height: 100%;width: 50%;"
+              >icon</el-icon>
             <template #dropdown>
               <el-dropdown-menu>
                 <el-dropdown-item>View</el-dropdown-item>
@@ -101,13 +104,20 @@
               </el-dropdown-menu>
             </template>
           </el-dropdown>
-          <h1 style="text-align: left;position: relative;top:-25px;">主页</h1>
-          <span>Tom</span>
-        </div>
-        </el-header>
-
-        <el-main>
+       
+          <div>
+            <span style="font-size: 15px;padding: 15px 0;">主页</span>
+          </div>
         
+        </el-header>
+        <div style="display: flex;flex-flow: row wrap;">
+          <div style="flex:1 1 auto">查询</div>
+          <div style="flex:1 1 auto">巡检id信息</div>
+          <div style="flex:1 1 auto">日期</div>
+          <div style="flex:1 1 auto">相关人</div>
+        </div>
+
+        <el-main class="tCard-main">
           <el-table :data="tableData">
             <el-table-column prop="date" label="Date" />
             <el-table-column prop="name" label="Name"  />
@@ -161,13 +171,13 @@ export default {
   margin-top: 0;
 }
 .header {
-  
   font-size: 20x;
   line-height: 45px;
   background-color:black;
   padding-left: 20px;
-
-
+}
+.main-header {
+  height:40px;
 }
 #user_pic {
   margin: 20px;
@@ -179,5 +189,27 @@ export default {
   top: -15px;
   right: 45px;
 }
+.t-main {
+  padding: 10px;
+  display: block;
+}
+.el-aside {
+  margin: 10px;
+  border: 1px solid #e8e8e8;
+  border-radius: 15px;
+}
 
+.t-main .tCard-main {
+  margin-top: 10px;
+  border: 1px solid #e8e8e8;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.el-header-body {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: auto;
+  background-color: white;
+}
 </style>
