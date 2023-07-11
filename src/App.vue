@@ -108,8 +108,10 @@
           <div>
             <span style="font-size: 15px;padding: 15px 0;">主页</span>
           </div>
-        
-        </el-header>
+        <el-button style="width:100px;height:30;margin:20px">
+            新增记录
+        </el-button>
+      </el-header>
         <div style="display: flex;flex-flow: row wrap;">
           <div style="flex:1 1 auto">查询</div>
           <div style="flex:1 1 auto">巡检id信息</div>
@@ -176,9 +178,11 @@ export default {
   background-color:black;
   padding-left: 20px;
 }
+
 .main-header {
   height:40px;
 }
+
 #user_pic {
   margin: 20px;
   float: right;
